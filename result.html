@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Triage Result</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-brand">
+        🏥 HealthTriage
+    </div>
+
+    <div class="nav-right">
+
+        <span id="welcomeUser"></span>
+
+        <button
+            class="logout-btn"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="main-container">
+
+    <div class="page-heading">
+
+        <span class="step">
+            STEP 3 OF 3
+        </span>
+
+        <h1>Triage Assessment Result</h1>
+
+        <p>
+            Review the generated prototype assessment.
+        </p>
+
+    </div>
+
+
+    <div class="result-card">
+
+        <div id="resultBox">
+
+            <div class="loading">
+                Loading assessment...
+            </div>
+
+        </div>
+
+
+        <div class="medical-note">
+
+            ⚠️ This result is a demonstration of a
+            software triage workflow and is not a medical diagnosis.
+
+        </div>
+
+
+        <div class="result-actions">
+
+            <button
+                class="secondary-btn"
+                onclick="goBack('triage.html')"
+            >
+                New Assessment
+            </button>
+
+            <button
+                class="primary-btn"
+                onclick="goToDashboard()"
+            >
+                Health Worker Dashboard →
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="app.js"></script>
+<script src="result.js"></script>
+
+</body>
+</html>

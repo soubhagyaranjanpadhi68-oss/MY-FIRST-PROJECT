@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Multimodal Triage</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-brand">
+        🏥 HealthTriage
+    </div>
+
+    <div class="nav-right">
+
+        <span id="welcomeUser"></span>
+
+        <button
+            class="logout-btn"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="main-container">
+
+    <div class="page-heading">
+
+        <span class="step">
+            STEP 2 OF 3
+        </span>
+
+        <h1>Multimodal Assessment</h1>
+
+        <p>
+            Provide symptoms using text, voice or an image.
+        </p>
+
+    </div>
+
+
+    <div class="assessment-grid">
+
+
+        <!-- TEXT -->
+
+        <div class="assessment-card">
+
+            <div class="card-icon">
+                📝
+            </div>
+
+            <h2>Describe Symptoms</h2>
+
+            <p>
+                Type the symptoms you are experiencing.
+            </p>
+
+            <textarea
+                id="symptoms"
+                rows="7"
+                placeholder="Example: fever, cough, headache..."
+            ></textarea>
+
+        </div>
+
+
+
+        <!-- VOICE -->
+
+        <div class="assessment-card">
+
+            <div class="card-icon">
+                🎤
+            </div>
+
+            <h2>Voice Input</h2>
+
+            <p>
+                Speak your symptoms.
+            </p>
+
+            <button
+                type="button"
+                class="voice-btn"
+                onclick="startVoice()"
+            >
+                🎤 Start Voice
+            </button>
+
+            <p id="voiceStatus" class="status-text">
+                Voice input is ready.
+            </p>
+
+        </div>
+
+
+
+        <!-- IMAGE -->
+
+        <div class="assessment-card">
+
+            <div class="card-icon">
+                📷
+            </div>
+
+            <h2>Image Input</h2>
+
+            <p>
+                Upload an image for the prototype.
+            </p>
+
+            <input
+                type="file"
+                id="medicalImage"
+                accept="image/*"
+            >
+
+            <img
+                id="imagePreview"
+                class="image-preview"
+                alt="Image preview"
+            >
+
+            <p id="imageStatus"></p>
+
+        </div>
+
+
+
+        <!-- DETAILS -->
+
+        <div class="assessment-card">
+
+            <div class="card-icon">
+                📊
+            </div>
+
+            <h2>Additional Details</h2>
+
+            <label>Severity</label>
+
+            <select id="severity">
+
+                <option value="mild">
+                    Mild
+                </option>
+
+                <option value="moderate">
+                    Moderate
+                </option>
+
+                <option value="severe">
+                    Severe
+                </option>
+
+            </select>
+
+
+            <label>Duration</label>
+
+            <select id="duration">
+
+                <option>
+                    Less than 1 day
+                </option>
+
+                <option>
+                    1–3 days
+                </option>
+
+                <option>
+                    4–7 days
+                </option>
+
+                <option>
+                    More than 7 days
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div class="assessment-bottom">
+
+        <button
+            class="secondary-btn"
+            onclick="goBack('patient.html')"
+        >
+            ← Back
+        </button>
+
+        <button
+            class="primary-btn large-btn"
+            onclick="performTriage()"
+        >
+            🔍 Start Triage Assessment
+        </button>
+
+    </div>
+
+
+    <div class="medical-note">
+
+        ⚠️ <strong>Important:</strong>
+
+        This prototype is intended to demonstrate a
+        triage-support workflow. It does not provide a medical
+        diagnosis. Emergency symptoms should be assessed by
+        qualified healthcare professionals.
+
+    </div>
+
+</main>
+
+
+<script src="app.js"></script>
+<script src="triage.js"></script>
+<script src="voice.js"></script>
+<script src="image.js"></script>
+
+</body>
+</html>

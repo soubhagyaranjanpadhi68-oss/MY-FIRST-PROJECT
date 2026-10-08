@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HealthTriage - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <div class="brand">
+            <div class="logo">🏥</div>
+
+            <h1>HealthTriage</h1>
+
+            <p>
+                Multimodal Healthcare Triage Assistant
+            </p>
+        </div>
+
+        <div class="login-card">
+
+            <h2>Welcome</h2>
+
+            <p class="sub-text">
+                Login to continue
+            </p>
+
+            <form id="loginForm">
+
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <label>Login As</label>
+
+                <select id="role">
+
+                    <option value="patient">
+                        Patient
+                    </option>
+
+                    <option value="healthworker">
+                        Health Worker
+                    </option>
+
+                </select>
+
+                <button type="submit" class="primary-btn">
+                    Login →
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+        </div>
+
+        <p class="demo-text">
+            Demo Prototype | Government / Institutional Health Facility
+        </p>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,603 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #087f5b;
+    --primary-dark: #056044;
+    --background: #f4f8f7;
+    --white: #ffffff;
+    --text: #17201d;
+    --muted: #68746f;
+    --border: #dce5e2;
+    --danger: #c62828;
+    --warning: #d97706;
+    --success: #16803c;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+
+/* LOGIN */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f6ef,
+            #f5faf8
+        );
+}
+
+.login-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 55px;
+}
+
+.brand h1 {
+    color: var(--primary);
+    font-size: 34px;
+}
+
+.brand p {
+    color: var(--muted);
+}
+
+.login-card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h2 {
+    font-size: 26px;
+}
+
+.sub-text {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.demo-text {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+    background: var(--primary);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 6%;
+}
+
+.nav-brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* MAIN */
+
+.main-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h1,
+.dashboard-heading h1 {
+    margin: 7px 0;
+    font-size: 30px;
+}
+
+.page-heading p,
+.dashboard-heading p {
+    color: var(--muted);
+}
+
+.step {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* FORM */
+
+.form-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    padding: 13px;
+    font-size: 15px;
+
+    outline: none;
+    background: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+}
+
+.form-actions,
+.result-actions,
+.assessment-bottom {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* BUTTONS */
+
+button {
+    border: none;
+    border-radius: 9px;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+}
+
+.secondary-btn {
+    background: #e8efed;
+    color: #26332f;
+}
+
+.logout-btn {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.large-btn {
+    padding: 14px 25px;
+}
+
+.voice-btn {
+    width: 100%;
+    background: #e9f6f1;
+    color: var(--primary);
+    padding: 15px;
+}
+
+
+/* ASSESSMENT */
+
+.assessment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.assessment-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.assessment-card h2 {
+    margin-bottom: 5px;
+}
+
+.assessment-card > p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.status-text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.image-preview {
+    display: none;
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: #f5f5f5;
+}
+
+
+/* NOTE */
+
+.medical-note {
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    background: #fff8df;
+
+    color: #654d00;
+
+    font-size: 13px;
+}
+
+
+/* RESULT */
+
+.result-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.06);
+}
+
+.patient-summary {
+    background: #f4f8f7;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.priority-box {
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.priority-box h2 {
+    margin-bottom: 8px;
+}
+
+.priority-emergency {
+    background: #ffe7e7;
+    border-left: 6px solid var(--danger);
+}
+
+.priority-urgent {
+    background: #fff0db;
+    border-left: 6px solid var(--warning);
+}
+
+.priority-routine {
+    background: #e6f6eb;
+    border-left: 6px solid var(--success);
+}
+
+.result-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.detail-box {
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.detail-box span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.detail-box strong {
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow:
+        0 4px 18px rgba(0,0,0,0.05);
+}
+
+.stat-icon {
+    font-size: 30px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.05);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.table-header p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.table-header input {
+    width: 250px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: #f2f7f5;
+    font-size: 13px;
+}
+
+td {
+    font-size: 14px;
+}
+
+.priority-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.tag-emergency {
+    background: #ffe1e1;
+    color: var(--danger);
+}
+
+.tag-urgent {
+    background: #fff0d6;
+    color: var(--warning);
+}
+
+.tag-routine {
+    background: #e2f5e8;
+    color: var(--success);
+}
+
+.empty-table {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 15px 5%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    .form-grid,
+    .assessment-grid,
+    .result-details {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .dashboard-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .table-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .table-header input {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .main-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .form-card,
+    .assessment-card,
+    .result-card,
+    .dashboard-card {
+        padding: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions,
+    .result-actions,
+    .assessment-bottom {
+        flex-direction: column;
+    }
+
+    .form-actions button,
+    .result-actions button,
+    .assessment-bottom button {
+        width: 100%;
+    }
+
+    .page-heading h1,
+    .dashboard-heading h1 {
+        font-size: 24px;
+    }
+}
